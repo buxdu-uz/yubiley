@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Announcement;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 class AnnouncementController extends Controller
@@ -17,6 +18,11 @@ class AnnouncementController extends Controller
     {
         return view('dashboard.announcements.index', [
             'announcements' => Announcement::with('languages')
+                ->where(function ($query) {
+                    if (Auth::user()->hasRole('manager')){
+                        $query->where('user_id', Auth::id());
+                    }
+                })
                 ->orderByDesc('created_at')
                 ->paginate(20),
         ]);
@@ -64,6 +70,7 @@ class AnnouncementController extends Controller
 
         try {
             $announcement = new Announcement();
+            $announcement->user_id = Auth::id();
             $announcement->date = $request->date;
             $announcement->type = $request->type;
             $announcement->save();
