@@ -18,14 +18,21 @@
                             <p class="lan-2">Dashboards,widgets & layout.</p>
                         </div>
                     </li>
-                    <li class="sidebar-list">
-                        <label class="badge badge-success">2</label><a class="sidebar-link sidebar-title" href="#"><i data-feather="home"></i><span class="lan-3">Dashboard              </span></a>
-                        <ul class="sidebar-submenu">
-                            <li><a class="lan-4" href="index.html">Default</a></li>
-                            <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="file-manager.html"><i data-feather="git-pull-request"> </i><span>File manager</span></a></li>
+{{--                    <li class="sidebar-list">--}}
+{{--                        <label class="badge badge-success">2</label><a class="sidebar-link sidebar-title" href="#"><i data-feather="home"></i><span class="lan-3">Dashboard              </span></a>--}}
+{{--                        <ul class="sidebar-submenu">--}}
+{{--                            <li><a class="lan-4" href="index.html">Default</a></li>--}}
+{{--                            <li><a class="lan-5" href="dashboard-02.html">Ecommerce</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                    ADMIN ROLE         --}}
+                    @role('admin')
+                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{ route('admin.users.index') }}"><i data-feather="git-pull-request"> </i><span>Managerlar</span></a></li>
+                    @endrole
+{{--                    MANAGER ROLE       --}}
+                    @role('manager')
+                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{ route('manager.news.index') }}"><i data-feather="git-pull-request"> </i><span>Yangiliklar</span></a></li>
+                    @endrole
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

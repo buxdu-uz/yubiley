@@ -38,7 +38,10 @@
                             <p>Login va parolingizni kiriting</p>
                             <div class="form-group">
                                 <label for="login" class="col-form-label">Login</label>
-                                <input class="form-control" name="login" id="login" type="text" required="" placeholder="Login...">
+                                <input class="form-control" name="login" id="login" type="text" value="{{ old('login') }}" required="" placeholder="Login...">
+                                @error('login')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="password" class="col-form-label">Parol</label>
@@ -46,6 +49,9 @@
                                     <input class="form-control" type="password" id="password" name="password" required="" placeholder="*********">
                                     <div class="show-hide"><span class="show">                         </span></div>
                                 </div>
+                                @error('password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="form-group mb-0">
                                 <div class="text-end mt-3">
