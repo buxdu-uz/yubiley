@@ -33,6 +33,10 @@
                     @role('manager')
                         <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{ route('manager.news.index') }}"><i data-feather="git-pull-request"> </i><span>Yangiliklar</span></a></li>
                     @endrole
+
+                    @hasanyrole('admin|manager')
+                        <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{ route('persons.index') }}"><i data-feather="git-pull-request"> </i><span>Ro`yxatdan o'tganlar</span></a></li>
+                    @endhasanyrole
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

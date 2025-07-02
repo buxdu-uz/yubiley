@@ -72,7 +72,7 @@
                 <a href="/tabriklar/index.html">Tabriklar</a>
             </li>
             <li>
-                <a href="/sign-up/index.html">Ro'yxatdan o'tish</a>
+                <a target="_blank" href="{{ route('register.page') }}">Ro'yxatdan o'tish</a>
             </li>
             <li id="lang-choice">
                 <a class="active" href="index.html">UZ</a>

@@ -3,6 +3,8 @@
 use App\Http\Controllers\Announcements\AnnouncementController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\MainController;
+use App\Http\Controllers\Persons\PersonController;
 use App\Http\Controllers\Users\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,15 +19,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.index');
-})->name('main');
+// FRONTEND ROUTES
+Route::get('/', [MainController::class,'index'])->name('main');
+Route::get('/register',[MainController::class,'register'])->name('register.page');
+Route::post('/register',[PersonController::class,'store'])->name('register');
 
+//AUTHENTICATION ROUTES
 Route::get('/login', [AuthController::class, 'loginPage'])->name('auth.login-page');
 Route::post('/login', [AuthController::class, 'login'])->name('auth.login');
 
+// AUTHENTICATION MIDDLEWARE
 Route::group(['middleware' => ['auth:web']], function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    Route::get('/persons', [PersonController::class, 'index'])->name('persons.index');
 
 //    MAIN PAGE
     Route::get('/main', [DashboardController::class, 'index'])->name('dashboard');

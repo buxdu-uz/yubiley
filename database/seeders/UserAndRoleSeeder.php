@@ -24,6 +24,8 @@ class UserAndRoleSeeder extends Seeder
 
         Role::updateorcreate([
             'name' => 'user'
+        ],[
+            'guard_name' => 'person'
         ]);
 
         $admin = User::updateOrCreate([
@@ -33,7 +35,7 @@ class UserAndRoleSeeder extends Seeder
             'password' => 'admin'
         ]);
 
-        $admin->assignRole('admin','manager','user');
+        $admin->assignRole('admin','manager');
 
         $manager = User::updateOrCreate([
             'login' => 'manager'
