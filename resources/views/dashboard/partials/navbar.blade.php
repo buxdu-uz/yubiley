@@ -46,9 +46,10 @@
                 </li>
                 <li class="maximize"><a class="text-dark" href="#!" onclick="javascript:toggleFullScreen()"><i data-feather="maximize"></i></a></li>
                 <li class="profile-nav onhover-dropdown p-0 me-0">
+
                     <div class="media profile-media"><img class="b-r-10" src="{{asset('dashboard/assets/images/dashboard/profile.jpg')}}" alt="">
-                        <div class="media-body"><span>{{ \Illuminate\Support\Facades\Auth::user()->name }}</span>
-                            <p class="mb-0 font-roboto">{{ \Illuminate\Support\Facades\Auth::user()->getRoleNames()->first() }} <i class="middle fa fa-angle-down"></i></p>
+                        <div class="media-body"><span>{{ $user->name ?? $user->full_name }}</span>
+                            <p class="mb-0 font-roboto">{{ $user->getRoleNames()->first() }} <i class="middle fa fa-angle-down"></i></p>
                         </div>
                     </div>
                     <ul class="profile-dropdown onhover-show-div">

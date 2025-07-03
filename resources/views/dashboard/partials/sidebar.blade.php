@@ -37,6 +37,10 @@
                     @hasanyrole('admin|manager')
                         <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{ route('persons.index') }}"><i data-feather="git-pull-request"> </i><span>Ro`yxatdan o'tganlar</span></a></li>
                     @endhasanyrole
+
+{{--                    @role('user','person')--}}
+                    <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav" href="{{ route('congratulations.index') }}"><i data-feather="git-pull-request"> </i><span>Tabiklar</span></a></li>
+{{--                    @endrole--}}
                 </ul>
             </div>
             <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>

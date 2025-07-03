@@ -38,6 +38,16 @@
         </filter>
     </svg>
 </div>
+@php
+    use Illuminate\Support\Facades\Auth;
+    $user = null;
+
+    if (Auth::guard('web')->check()) {
+        $user = Auth::guard('web')->user();
+    } elseif (Auth::guard('person')->check()) {
+        $user = Auth::guard('person')->user();
+    }
+@endphp
 <!-- page-wrapper Start-->
 <div class="page-wrapper compact-wrapper" id="pageWrapper">
     <!-- Page Header Start-->

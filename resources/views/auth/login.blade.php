@@ -43,7 +43,7 @@
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group  mb-3">
                                 <label for="password" class="col-form-label">Parol</label>
                                 <div class="form-input position-relative">
                                     <input class="form-control" type="password" id="password" name="password" required="" placeholder="*********">
@@ -51,6 +51,19 @@
                                 </div>
                                 @error('password')
                                     <span class="text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group d-flex align-items-center">
+                                <div class="form-check radio radio-primary" style="margin-right: 15px;">
+                                    <input class="form-check-input" checked id="radio11" type="radio" name="guard" value="employee">
+                                    <label class="form-check-label" for="radio11"><span class="digits">Xodim</span></label>
+                                </div>
+                                <div class="form-check radio radio-success">
+                                    <input class="form-check-input" id="radio55" type="radio" name="guard" value="user">
+                                    <label class="form-check-label" for="radio55"><span class="digits">Foydalanuvchi</span></label>
+                                </div>
+                                @error('guard')
+                                <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-group mb-0">

@@ -24,13 +24,24 @@ class AuthController extends Controller
                 'login.required' => 'Iltimos loginni kiriting!',
                 'login.exists' => 'Bunday login bazada topilmadi!',
                 'password.required' => 'Iltimos parolni kiriting',
+                'guard.required' => 'Iltimos tizimga kirish uchun roli tanlang!',
+                'guard.in' => 'Iltimos tizimga kirish uchun roli tanlang: Xodim yoki Foydalanuvchi!',
             ];
 
             // Validatsiya
             $request->validate([
-                'login' => 'required|exists:users,login',
-                'password' => 'required|string'
+                'login' => 'required',
+                'password' => 'required|string',
+                'guard' => 'required|in:employee,user',
             ], $messages);
+            switch ($request->guard) {
+                case 'employee':
+                    Auth::shouldUse('web');
+                    break;
+                case 'user':
+                    Auth::shouldUse('person');
+                    break;
+            }
 
             if (!Auth::attempt(['login' => $request->login, 'password' => $request->password])) {
                 return redirect()
@@ -38,9 +49,10 @@ class AuthController extends Controller
                     ->withErrors(['login' => 'Login yoki parol xato!'])
                     ->withInput();
             }
-
+//            dd(Auth::user());
             return redirect()->route('dashboard');
         } catch (Exception $exception) {
+            dd($exception);
             return redirect()
                 ->back()
                 ->with('message', $exception->getMessage());

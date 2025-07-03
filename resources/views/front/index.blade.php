@@ -58,12 +58,12 @@
     <div id="main-menu">
         <ul>
             <li>
-                <a href="/news/index.html">Yangiliklar</a>
+                <a href="{{ route('post.page','news') }}">Yangiliklar</a>
             </li>
 
 
             <li>
-                <a href="/elon/index.html">E'lonlar</a>
+                <a href="{{ route('post.page','announcement') }}">E'lonlar</a>
             </li>
             <li class="active">
                 <a href="/">Universitet tarixi</a>
