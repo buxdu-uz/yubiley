@@ -75,20 +75,26 @@
     <div id="main-menu">
         <ul>
             <li>
-                <a href="#">Yangiliklar</a>
+                <a href="{{ route('post.page','news') }}">Yangiliklar</a>
             </li>
 
+
             <li>
-                <a href="#">E'lonlar</a>
-            </li>
-            <li>
-                <a href="#">Universitet tarixi</a>
-            </li>
-            <li>
-                <a href="#">Tabriklar</a>
+                <a href="{{ route('post.page','announcement') }}">E'lonlar</a>
             </li>
             <li class="active">
-                <a href="#">Ro'yxatdan o'tish</a>
+                <a href="/">Universitet tarixi</a>
+            </li>
+            <li>
+                <a href="{{ route('congratulations.page') }}">Tabriklar</a>
+            </li>
+            <li>
+                <a target="_blank" href="{{ route('register.page') }}">Ro'yxatdan o'tish</a>
+            </li>
+            <li id="lang-choice">
+                <a class="active" href="index.html">UZ</a>
+                <a href="/ru/index.html">РУ</a>
+                <a href="/en/index.html">ENG</a>
             </li>
             <!-- <li id="lang-choice">
                 <a class="active" href="index.htm">RU</a>

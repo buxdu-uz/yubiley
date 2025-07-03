@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [MainController::class,'index'])->name('main');
 Route::get('/post/{type}',[MainController::class,'post'])->name('post.page');
 Route::get('/register',[MainController::class,'register'])->name('register.page');
+Route::get('/congratulation',[MainController::class,'congratulation'])->name('congratulations.page');
 Route::post('/register',[PersonController::class,'store'])->name('register');
 
 //AUTHENTICATION ROUTES
@@ -63,6 +64,7 @@ Route::group(['middleware' => ['auth:web']], function () {
         Route::get('announcements/{announcement}/show', [AnnouncementController::class, 'show'])->name('news.show');
         Route::get('announcements/edit', [AnnouncementController::class, 'edit'])->name('news.edit');
         Route::post('news/store', [AnnouncementController::class, 'store'])->name('news.store');
+        Route::get('congratulations/{congratulation}/status/{status}', [CongratulationController::class, 'updateStatus'])->name('congratulations.status');
     });
 
 

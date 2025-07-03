@@ -30,6 +30,18 @@ class CongratulationController extends Controller
         return view('dashboard.congratulations.create');
     }
 
+    public function updateStatus(Congratulation $congratulation,$status)
+    {
+        if($status == 'accept'){
+            $congratulation->status = 'published';
+        } elseif ($status == 'reject') {
+            $congratulation->status = 'rejected';
+        }
+        $congratulation->update();
+
+        return redirect()->back();
+    }
+
     public function show(Congratulation $congratulation)
     {
         return view('dashboard.congratulations.show',[

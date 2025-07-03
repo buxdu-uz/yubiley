@@ -57,28 +57,34 @@
     <div id="menu-header"><a id="closeMenu"></a></div>
     <div id="main-menu">
         <ul>
-            <li>
-                <a href="{{ route('post.page','news') }}">Yangiliklar</a>
-            </li>
+            <ul>
+                <li>
+                    <a href="{{ route('post.page','news') }}">Yangiliklar</a>
+                </li>
 
 
-            <li>
-                <a href="{{ route('post.page','announcement') }}">E'lonlar</a>
-            </li>
-            <li class="active">
-                <a href="/">Universitet tarixi</a>
-            </li>
-            <li>
-                <a href="/tabriklar/index.html">Tabriklar</a>
-            </li>
-            <li>
-                <a target="_blank" href="{{ route('register.page') }}">Ro'yxatdan o'tish</a>
-            </li>
-            <li id="lang-choice">
-                <a class="active" href="index.html">UZ</a>
-                <a href="/ru/index.html">РУ</a>
-                <a href="/en/index.html">ENG</a>
-            </li>
+                <li>
+                    <a href="{{ route('post.page','announcement') }}">E'lonlar</a>
+                </li>
+                <li class="active">
+                    <a href="/">Universitet tarixi</a>
+                </li>
+                <li>
+                    <a href="{{ route('congratulations.page') }}">Tabriklar</a>
+                </li>
+                <li>
+                    <a target="_blank" href="{{ route('register.page') }}">Ro'yxatdan o'tish</a>
+                </li>
+                <li id="lang-choice">
+                    <a class="active" href="index.html">UZ</a>
+                    <a href="/ru/index.html">РУ</a>
+                    <a href="/en/index.html">ENG</a>
+                </li>
+                <!-- <li id="lang-choice">
+                    <a class="active" href="index.htm">RU</a>
+                    <a href="en/index.htm">ENG</a>
+                </li> -->
+            </ul>
         </ul>
     </div>
     <ul id="years-menu">

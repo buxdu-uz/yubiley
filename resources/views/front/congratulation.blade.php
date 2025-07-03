@@ -123,21 +123,22 @@
 <main>
 
     <div class="wrap buxdu_news">
-        <h1>Yangiliklar</h1>
+        <h1>Tabriklar</h1>
         <div class="news" >
-            @foreach($posts as $post)
+            @foreach($congratulations as $congratulation)
                 <div class="new">
                     <div class="new_header">
-                        <img src="{{ asset('storage/files/announcements/'.$post->files()->first()->filename) }}" loading="lazy" alt="image">
+                        <img src="{{ asset('front/images/new.png') }}" loading="lazy" alt="image">
                     </div>
                     <div class="new_body">
                         <a href="#">
                             <div class="date">
                                 <img src="{{ asset('front/images/date.svg') }}" loading="lazy" width="20" alt="date">
-                                <p>{{ $post->date }}</p>
+                                <p>{{ $congratulation->created_at }}</p>
                             </div>
-                            <h3>{{ $post->languages()->where('lang', 'uz')->first()->title }}</h3>
-                            <p>{{ $post->languages()->where('lang', 'uz')->first()->text }}</p>
+                            <h3>{{ $congratulation->title }}</h3>
+                            <p>
+                                {{ $congratulation->text }}                            </p>
                         </a>
 
                     </div>
@@ -150,7 +151,7 @@
 <footer id="footer">
     <div class="wrap">
         <div class="col" id="footer-1">
-            <a id="footer-logo" href="/"><img src="{{ asset('front/images/logoWhite.png') }}"></a>
+            <a id="footer-logo" href="/"><img src="/images/logoWhite.png"></a>
             <div class="partners mobile-hide">
 
                 <div id="gen-partner">

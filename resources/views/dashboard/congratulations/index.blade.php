@@ -48,7 +48,11 @@
                             </td>
                             @if(\Illuminate\Support\Facades\Auth::guard('web')->check())
                                 <td>
-                                    <a class="btn btn-sm btn-success" href="{{ route('congratulations.show',$congratulation) }}"><i data-feather="eye"></i></a>
+                                    <a class="btn btn-sm btn-primary" href="{{ route('congratulations.show',$congratulation) }}"><i data-feather="eye"></i></a>
+                                    @if($congratulation->status == 'pending')
+                                        <a class="btn btn-sm btn-success" href="{{ route('manager.congratulations.status',[$congratulation,'accept']) }}"><i data-feather="check-circle"></i></a>
+                                        <a class="btn btn-sm btn-danger" href="{{ route('manager.congratulations.status',[$congratulation,'reject']) }}"><i data-feather="x-circle"></i></a>
+                                    @endif
                                 </td>
                             @endif
                         </tr>
