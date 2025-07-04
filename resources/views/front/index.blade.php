@@ -75,11 +75,11 @@
                 <li>
                     <a target="_blank" href="{{ route('register.page') }}">Ro'yxatdan o'tish</a>
                 </li>
-                <li id="lang-choice">
-                    <a class="active" href="index.html">UZ</a>
-                    <a href="/ru/index.html">РУ</a>
-                    <a href="/en/index.html">ENG</a>
-                </li>
+{{--                <li id="lang-choice">--}}
+{{--                    <a class="active" href="index.html">UZ</a>--}}
+{{--                    <a href="/ru/index.html">РУ</a>--}}
+{{--                    <a href="/en/index.html">ENG</a>--}}
+{{--                </li>--}}
                 <!-- <li id="lang-choice">
                     <a class="active" href="index.htm">RU</a>
                     <a href="en/index.htm">ENG</a>
@@ -327,8 +327,14 @@
                 <div class="col" id="y-1956-2-1">
                     <h2 class="year year1">1980</h2>
                     <div class="descr m-descr">Zoologiya kafedrasining navbatdagi yig‘ilishi.</div>
+                </div>
+
+                <div class="col" id="y-1956-2-2">
+                    <h2 class="year year1" style="bottom: 396.475px;">1980</h2>
+                    <div class="descr m-descr" style="top: 594.713px;">1980 yilda Zoologiya kafedrasida navbatdagi yig‘ilish bo‘lib o‘tdi. Unda professor-o‘qituvchilar ilmiy va o‘quv jarayonlari bo‘yicha fikr almashishdi. Yig‘ilish davomida yangi tadqiqot yo‘nalishlari muhokama qilindi. Bu uchrashuv kafedraning ilmiy salohiyatini yanada oshirishga xizmat qildi.</div>
 
                 </div>
+
 
             </div>
         </div>
@@ -454,7 +460,7 @@
 
     <div id="y-2006" class="screen block-2">
         <img class="img1" src="{{ asset('front/images/img33.png') }}">
-        <img class="img2" src="{{ asset('front/imgs/2006-hor.svg') }}?v=1">
+        <img class="img2" src="{{ asset('front/imgs/2006-hor.png') }}?v=1">
         <div class="content">
             <h2 class="year year2">2012</h2>
             <div class="descr">
@@ -498,10 +504,10 @@
 
 
     <div id="y-2012-1" class="screen block-2 full-content">
-        <h2 class="year year-medium">2016</h2>
+        <h2 class="year year-medium">2015</h2>
         <div id="y-2012-endy">
             <div class="content">
-                <h3>Bosh binoga kirish joyi. 2016 yil.</h3>
+                <h3>Bosh binoga kirish joyi. 2015 yil.</h3>
 
                 <a class="btn" href="https://buxdu.uz" target="_blank">Rasmiy veb sayt</a>
             </div>

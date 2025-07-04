@@ -3829,6 +3829,46 @@ a.twitter {
     }
 }
 
+.post_page{
+    background-color: #fff;
+}
+
+.post_detail {
+    max-width: 1550px;
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.post_detail .post_detail_left img{
+    width: 100%;
+}
+
+
+.post_detail .post_detail_right .news .new .new_header {
+    height: 240px;
+}
+
+.post_detail .post_detail_left h3{
+    margin: 15px 0px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.post_detail .post_detail_left p{
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.post_detail .post_detail_right .new{
+    width: 360px;
+}
+
+.post_detail .post_detail_right .new .new_header {
+    height: 230px;
+}
+
 @media (max-width: 490px) {
     .buxdu_news .news .new {
         width: 100%;

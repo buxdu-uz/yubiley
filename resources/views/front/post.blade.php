@@ -107,11 +107,11 @@
             <li>
                 <a target="_blank" href="{{ route('register.page') }}">Ro'yxatdan o'tish</a>
             </li>
-            <li id="lang-choice">
-                <a class="active" href="index.html">UZ</a>
-                <a href="/ru/index.html">РУ</a>
-                <a href="/en/index.html">ENG</a>
-            </li>
+{{--            <li id="lang-choice">--}}
+{{--                <a class="active" href="index.html">UZ</a>--}}
+{{--                <a href="/ru/index.html">РУ</a>--}}
+{{--                <a href="/en/index.html">ENG</a>--}}
+{{--            </li>--}}
             <!-- <li id="lang-choice">
                 <a class="active" href="index.htm">RU</a>
                 <a href="en/index.htm">ENG</a>

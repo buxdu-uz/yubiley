@@ -1,4 +1,4 @@
-var img_path = "/imgs/";
+var img_path = "../front/imgs/";
 $(document).ready(function () {
 
     $('.slider').addClass("owl-carousel").owlCarousel({
@@ -206,10 +206,10 @@ if (pc) {
 }
 
 /* var year1920_1 = new TimelineMax()
-.add(TweenMax.to(function(){},0,{onReverseComplete:function(){ 
+.add(TweenMax.to(function(){},0,{onReverseComplete:function(){
     $("#menu").removeClass("bright");}, immediateRender:false}))
 .to("#menu", {className:"bright"});
-   
+
 new ScrollMagic.Scene({
          triggerElement: "#y-1920-2"
      })
@@ -390,10 +390,10 @@ if (pc) {
 }
 
 /* var year1940_s = new TimelineMax()
-.add(TweenMax.to(function(){},0,{ onReverseComplete:function(){ 
+.add(TweenMax.to(function(){},0,{ onReverseComplete:function(){
     $("#menu").removeClass("bright");}, immediateRender:false}))
 //.to("#h1940", 0.5, { bottom: $("#block5").offset.top + $("#block5").height() })
-.to("#menu", {className:"bright"}); 
+.to("#menu", {className:"bright"});
 new ScrollMagic.Scene({
          triggerElement: "#y-1940-space",
          offset: -1
