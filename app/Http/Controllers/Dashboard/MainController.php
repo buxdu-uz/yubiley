@@ -35,7 +35,7 @@ class MainController extends Controller
         $posts = Announcement::query()
             ->where('type', $type)
             ->orderByDesc('created_at')
-            ->paginate(10);
+            ->paginate(6);
 
         return view('front.post', [
             'posts' => $posts

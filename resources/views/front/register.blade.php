@@ -139,92 +139,123 @@
             <form class="form-bg" method="post" action="{{ route('register') }}">
                 @csrf
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="To'liq FIO" name="full_name" value="{{ old('full_name') }}">
                     @error('full_name')
-                        <span class="text-danger">{{ $message }}</span>
+                        <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <select name="rol" id="" aria-placeholder="Ishtirok etish roli">
                         <option value="1">Ishtirok etish roli</option>
                         <option value="1">Ishtirokchi</option>
                     </select>
+                        <span style="font-size: 11px; color: red"></span>
+                    </div>
                 </div>
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="date" placeholder="Tug'ilgan kun" name="birthday"  value="{{ old('birthday') }}">
                     @error('birthday')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <select name="sex" id="sex">
                         <option value="0">Jinsi</option>
                         <option value="male">Erkak</option>
                         <option value="female">Ayol</option>
                     </select>
                     @error('sex')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
                 </div>
 
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="email" placeholder="user@gmail.com" name="email"  value="{{ old('email') }}">
                     @error('email')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="number" placeholder="998901234567" name="phone"  value="{{ old('phone') }}">
                     @error('phone')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
                 </div>
 
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Passport ID" name="passport"  value="{{ old('passport') }}">
                     @error('passport')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Mamlakat" name="country"  value="{{ old('country') }}">
                     @error('country')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
 
                 </div>
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Yashash manzili" name="address"  value="{{ old('address') }}">
                     @error('address')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Tug'ilgan joy" name="place_of_birth"  value="{{ old('place_of_birth') }}">
                     @error('place_of_birth')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
-
+                    </div>
                 </div>
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Tashkilot" name="organization" value="{{ old('organization') }}">
                     @error('organization')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Lavozim" name="position" value="{{ old('position') }}">
                     @error('position')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
-
+                    </div>
                 </div>
 
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <textarea name="activity" placeholder="Faoliyat" id="" cols="30" rows="4">{{ old('activity') }}</textarea>
                     @error('activity')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="font-size: 11px; color: red">{{ $message }}</span>
                     @enderror
+                    </div>
                 </div>
                 <div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Login" name="login" value="{{ old('login') }}">
                     @error('login')
                         <br>
-                        <span style="color: red; font-size: 12px">{{ $message }}</span>
+                        <span style="color: red; font-size: 11px">{{ $message }}</span>
                     @enderror
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: start; gap: 3px;">
                     <input type="text" placeholder="Parol" name="password">
                     @error('password')
-                    <span class="text-danger">{{ $message }}</span>
+                    <span style="color: red; font-size: 11px">{{ $message }}</span>
                     @enderror
-
+                    </div>
                 </div>
                 <button type="submit">Ro'yxatdan o'tish</button>
             </form>

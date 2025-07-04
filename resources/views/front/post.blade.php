@@ -121,7 +121,7 @@
 
 </nav>
 <main>
-
+<div class="post_page" >
     <div class="wrap buxdu_news">
         <h1>Yangiliklar</h1>
         <div class="news" >
@@ -144,8 +144,21 @@
                 </div>
             @endforeach
         </div>
-    </div>
 
+        <div class="pagination">
+            {{ $posts->links() }}
+{{--            <ul>--}}
+{{--                <li><a href="#" class="active">1</a></li>--}}
+{{--                <li><a href="#">2</a></li>--}}
+{{--                <li><a href="#">3</a></li>--}}
+{{--                <li><a href="#">...</a></li>--}}
+{{--                <li><a href="#">10</a></li>--}}
+{{--                <li><a href="#">11</a></li>--}}
+{{--                <li><a href="#">12</a></li>--}}
+{{--            </ul>--}}
+        </div>
+    </div>
+</div>
 </main>
 <footer id="footer">
     <div class="wrap">
